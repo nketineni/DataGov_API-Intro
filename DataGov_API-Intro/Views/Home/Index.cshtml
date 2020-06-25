@@ -1,0 +1,13 @@
+﻿@model DataGov_API_Intro.Models.Parks
+
+@{
+  ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (DataGov_API_Intro.Models.Park park in Model.data)
+{
+  @(park.parkCode + " " + park.fullName + " " + park.latLong)
+  <br />
+}
